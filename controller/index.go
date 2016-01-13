@@ -1,11 +1,14 @@
 package controller
 
 import (
-	"fmt"
-	"html"
 	"net/http"
+
+	"github.com/carloct/slprofile/shared/view"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+
+	v := view.New(r)
+	v.Name = "index"
+	v.Render(w)
 }

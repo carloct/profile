@@ -3,8 +3,8 @@ package route
 import (
 	"net/http"
 
-	"github.com/carloct/jsproducts/controller"
-	hr "github.com/carloct/jsproducts/route/middleware/httprouterwrapper"
+	"github.com/carloct/slprofile/controller"
+	hr "github.com/carloct/slprofile/route/middleware/httprouterwrapper"
 
 	"github.com/julienschmidt/httprouter"
 )

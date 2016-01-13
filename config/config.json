@@ -2,5 +2,34 @@
 	"Server": {
 		"Hostname": "",
 		"HTTPPort": 8080
+	},
+	"Database": {
+		"Type": "SQLite",
+		"MySQL": {
+			"Username": "root",
+			"Password": "",
+			"Name": "jsproducts",
+			"Hostname": "127.0.0.1",
+			"Port": 3306,
+			"Parameter": "?parseTime=true"
+		},
+		"SQLite": {
+			"Parameter": "jsproducts.db"
+		}
+	},
+	"View": {
+		"BaseURI": "/",
+		"Extension": "html",
+		"Folder": "template",
+		"Name": "blank",
+		"Layout": "base",
+		"Caching": true
+	},
+	"Template": {
+		"Root": "layouts",
+		"Children": [
+			"menu",
+			"footer"
+		]
 	}
 }
