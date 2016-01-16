@@ -1,7 +1,3 @@
-// Copyright 2010 The Go Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 package main
 
 import (
@@ -9,9 +5,9 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/carloct/slprofile/route"
-	"github.com/carloct/slprofile/shared/jsonconfig"
-	"github.com/carloct/slprofile/shared/server"
+	"github.com/carloct/profile/route"
+	"github.com/carloct/profile/shared/jsonconfig"
+	"github.com/carloct/profile/shared/server"
 )
 
 func init() {
