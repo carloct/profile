@@ -1,0 +1,34 @@
+html {
+  line-height: 13px;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    line-height: 1.53rem;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-default {
+	border-bottom: 1px solid #e2e9e6;
+}
+
+.navbar-default {
+	background-color: #fff;
+	border-color: #eee;
+}
+
+.navbar-brand {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 1.265rem;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-brand {
+    color: #212121;
+}

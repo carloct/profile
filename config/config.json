@@ -29,7 +29,7 @@
 		"Hostname": "",
 		"UseHTTP": true,
 		"UseHTTPS": false,
-		"HTTPPort": 8080,
+		"HTTPPort": 8000,
 		"HTTPSPort": 443,
 		"CertFile": "tls/server.crt",
 		"KeyFile": "tls/server.key"
@@ -46,17 +46,17 @@
 		}
 	},
 	"Template": {
-		"Root": "index",
+		"Root": "layouts/base",
 		"Children": [
-			"menu",
-			"footer"
+			"includes/sidebar"
 		]
 	},
 	"View": {
 		"BaseURI": "/",
-		"Extension": "tmpl",
+		"Extension": "html",
 		"Folder": "template",
+		"Layout": "base",
 		"Name": "blank",
-		"Caching": true
+		"Caching": false
 	}
 }

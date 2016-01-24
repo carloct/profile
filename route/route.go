@@ -25,6 +25,12 @@ func LoadHTTP() http.Handler {
 func routes() *httprouter.Router {
 	r := httprouter.New()
 
+	// Serve static files, no directory browsing
+	r.GET("/static/*filepath", hr.Handler(alice.
+		New().
+		ThenFunc(controller.Static)))
+
+	r.GET("/register", hr.Handler(alice.New().ThenFunc(controller.UserNew)))
 	// Home page
 	r.GET("/", hr.Handler(alice.
 		New().
