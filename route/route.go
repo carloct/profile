@@ -31,6 +31,12 @@ func routes() *httprouter.Router {
 		ThenFunc(controller.Static)))
 
 	r.GET("/register", hr.Handler(alice.New().ThenFunc(controller.UserNew)))
+	r.POST("/register", hr.Handler(alice.New().ThenFunc(controller.UserCreate)))
+
+	r.GET("/login", hr.Handler(alice.New().ThenFunc(controller.LoginGET)))
+	r.POST("/login", hr.Handler(alice.New().ThenFunc(controller.LoginPOST)))
+
+	r.POST("/closet/create", hr.Handler(alice.New().ThenFunc(controller.ClosetCreate)))
 	// Home page
 	r.GET("/", hr.Handler(alice.
 		New().

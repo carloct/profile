@@ -9,20 +9,20 @@
 	<title>Layout</title>
 </head>
 <body>
-	<div class="container">
-		<div class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">SOme</a>
-				</div>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">SOme</a>
 			</div>
 		</div>
-		<div class="row row-offcanvas-left">
-		{{ template "sidebar" .}}
+	</div>
+	<div class="container-fluid">
+	
 		{{ template "content" .}}
-		</div>
+	
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/js/main.js"></script>
 </body>
 </html>

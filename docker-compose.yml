@@ -1,0 +1,10 @@
+mysql:
+  container_name: profile-mysql
+  image: mysql
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: profile
+    MYSQL_DATABASE: profile
+    MYSQL_USER: profile
+    MYSQL_PASSWORD: secret

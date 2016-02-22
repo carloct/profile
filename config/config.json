@@ -1,11 +1,11 @@
 {
 	"Database": {
-		"Type": "SQLite",
+		"Type": "MySQL",
 		"MySQL": {
-			"Username": "root",
-			"Password": "",
-			"Name": "gowebapp",
-			"Hostname": "127.0.0.1",
+			"Username": "profile",
+			"Password": "secret",
+			"Name": "profile",
+			"Hostname": "192.168.99.100",
 			"Port": 3306,
 			"Parameter": "?parseTime=true"
 		},
