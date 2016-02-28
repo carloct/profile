@@ -37,6 +37,9 @@ func routes() *httprouter.Router {
 	r.POST("/login", hr.Handler(alice.New().ThenFunc(controller.LoginPOST)))
 
 	r.POST("/closet/create", hr.Handler(alice.New().ThenFunc(controller.ClosetCreate)))
+	r.GET("/closet/:id", hr.Handler(alice.New().ThenFunc(controller.ClosetIndex)))
+
+	r.POST("/closet/item/add", hr.Handler(alice.New().ThenFunc(controller.ItemCreate)))
 	// Home page
 	r.GET("/", hr.Handler(alice.
 		New().

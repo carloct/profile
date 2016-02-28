@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"fmt"
+	_ "fmt"
 	"net/http"
 
 	"github.com/carloct/profile/model"
@@ -19,7 +19,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Printf("%+v", sess)
 	sess.Save(r, w)
 
 	v := view.New(r)

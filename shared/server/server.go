@@ -19,5 +19,5 @@ func Run(httpHandlers http.Handler, s Server) {
 func startHTTP(handlers http.Handler, s Server) {
 	fmt.Println(time.Now().Format("2006-01-02 03:04:05 PM"), "Running HTTP")
 
-	log.Fatal(http.ListenAndServe(":8000", handlers))
+	log.Fatal(http.ListenAndServe(":8888", handlers))
 }
