@@ -8,28 +8,13 @@
 			"Hostname": "192.168.99.100",
 			"Port": 3306,
 			"Parameter": "?parseTime=true"
-		},
-		"SQLite": {
-			"Parameter": "gowebapp.db"
 		}
-	},
-	"Email": {
-		"Username": "",
-		"Password": "",
-		"Hostname": "",
-		"Port": 25,
-		"From": ""
-	},
-	"Recaptcha": {
-		"Enabled": false,
-		"Secret": "",
-		"SiteKey": ""
 	},
 	"Server": {
 		"Hostname": "",
 		"UseHTTP": true,
 		"UseHTTPS": false,
-		"HTTPPort": 8000,
+		"HTTPPort": 8888,
 		"HTTPSPort": 443,
 		"CertFile": "tls/server.crt",
 		"KeyFile": "tls/server.key"

@@ -33,3 +33,15 @@ body {
 .navbar-default .navbar-brand {
     color: #212121;
 }
+
+.page {
+  background-color: gray;
+}
+
+.page ul {
+  list-style: none;
+}
+
+.page ul li {
+  background-color: white;
+}

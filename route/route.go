@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/carloct/profile/controller"
+	"github.com/carloct/profile/route/middleware/auth"
 	hr "github.com/carloct/profile/route/middleware/httprouterwrapper"
 
 	"github.com/julienschmidt/httprouter"
@@ -26,9 +27,7 @@ func routes() *httprouter.Router {
 	r := httprouter.New()
 
 	// Serve static files, no directory browsing
-	r.GET("/static/*filepath", hr.Handler(alice.
-		New().
-		ThenFunc(controller.Static)))
+	r.GET("/static/*filepath", hr.Handler(alice.New().ThenFunc(controller.Static)))
 
 	r.GET("/register", hr.Handler(alice.New().ThenFunc(controller.UserNew)))
 	r.POST("/register", hr.Handler(alice.New().ThenFunc(controller.UserCreate)))
@@ -36,10 +35,9 @@ func routes() *httprouter.Router {
 	r.GET("/login", hr.Handler(alice.New().ThenFunc(controller.LoginGET)))
 	r.POST("/login", hr.Handler(alice.New().ThenFunc(controller.LoginPOST)))
 
-	r.POST("/closet/create", hr.Handler(alice.New().ThenFunc(controller.ClosetCreate)))
-	r.GET("/closet/:id", hr.Handler(alice.New().ThenFunc(controller.ClosetIndex)))
+	r.GET("/book/new", hr.Handler(alice.New(auth.Authenticate).ThenFunc(controller.BookNew)))
+	r.POST("/book/create", hr.Handler(alice.New(auth.Authenticate).ThenFunc(controller.BookCreate)))
 
-	r.POST("/closet/item/add", hr.Handler(alice.New().ThenFunc(controller.ItemCreate)))
 	// Home page
 	r.GET("/", hr.Handler(alice.
 		New().

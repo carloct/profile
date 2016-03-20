@@ -26,3 +26,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	v.Vars["Closets"] = closets
 	v.Render(w)
 }
+
+func CreateBook() {
+
+}
